@@ -1,0 +1,54 @@
+.container{
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "side sidebar";
+  }
+  .side{
+    background-color: red;
+     grid-area: side;
+    
+  }
+  .sidebar{
+    background-color: rgb(125, 6, 6) ;
+    grid-area: sidebar;
+  }
+  .hamburger{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    
+  }
+  .bar{
+    height: 5px;
+    width: 35px;
+    background: #fff;
+    margin: 10px auto;
+    box-shadow: 0px 5px 50px 5px;
+  }
+  .hamburger:hover :first-child{
+    transform: rotateZ(45deg);
+    transform-origin: 0% 0%;
+    margin-left: 15px;
+    transition: 500ms;
+  }
+  .hamburger:hover :last-child{
+    transform: rotateZ(-45deg);
+    transform-origin: 0% 0%;
+    margin-top: 20px;
+    transition: 500ms;
+  }
+  .hamburger:hover :nth-child(2){
+    display: none;
+    transition: 500ms;
+  }
+  .hamburger:hover +.texts {
+    transform: translateX(20%);
+    transition: 1s;
+  }
+  .texts {
+    margin-left: 60px;
+  }
