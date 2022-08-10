@@ -44,6 +44,7 @@
 }
 .names {
     width:350px;
+    color: white;
     height:500px;
     margin-left: 60px;
     transform: translateX(0%);
@@ -57,4 +58,20 @@
 .sidebar {
   background-color: red;
   grid-area: sidebar;
+}
+.w1:hover{
+  width:40px;
+  border-bottom:1px solid white ;
+  border-top:1px solid white ;
+
+}
+.w2:hover{
+  width: 45px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+.w3:hover{
+  width: 80px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
 }
