@@ -1,77 +1,88 @@
 .container {
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-  "side sidebar";
+  grid-template-areas:
+    "side sidebar";
 }
+
 .side {
   background-color: rgb(142, 31, 31);
   grid-area: side;
 }
+
 .hamburger {
-  width:60px;
-  height:60px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  opacity: 1;
 }
+
 .line {
-    background-color: white;
-    width: 40px;
-    height: 5px;
-    margin-top: 10px;
-    box-shadow: 0px 5px 50px 5px;
+  background-color: white;
+  width: 40px;
+  height: 5px;
+  margin-top: 10px;
+  box-shadow: 0px 5px 50px 5px;
 }
-.hamburger:hover :first-child {
-    transform: rotate(45deg);
-    transform-origin: 0% 0%;
-    margin-left: 10px;
-    transition: 500ms;
+
+input:hover +.hamburger :first-child {
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
+  margin-left: 10px;
+  transition: 500ms;
 }
-.hamburger:hover :nth-child(2) {
-    display: none;
-    transition: 500ms;
+
+input:hover +.hamburger :nth-child(2) {
+  display: none;
+  transition: 500ms;
 }
-.hamburger:hover :last-child {
-    transform: rotate(-45deg);
-    transform-origin: 0% 0%;
-    margin-top: 24px;
-    transition: 500ms;
+
+input:hover +.hamburger :last-child {
+  transform: rotate(-45deg);
+  transform-origin: 0% 0%;
+  margin-top: 24px;
+  transition: 500ms;
+}
+input:checked +.hamburger +.names {
+  transform: translateX(20%);
+  opacity: 1;
 }
 .names {
-    width:350px;
-    color: white;
-    height:500px;
-    margin-left: 60px;
-    transform: translateX(0%);
-    transition: 500ms;
-    opacity: 0;
+  width: 350px;
+  height: 500px;
+  margin-left: 60px;
+  transform: translateX(0%);
+  transition: 500ms;
+  opacity: 0;
 }
-.hamburger:hover +.names {
-    transform: translateX(20%);
-    opacity: 1;
+
+input {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+}
+.n1:hover {
+  width:50px;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+}
+.n2:hover {
+  width:90px;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+}
+.n3:hover {
+  width:80px;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
 }
 .sidebar {
   background-color: red;
   grid-area: sidebar;
-}
-.w1:hover{
-  width:40px;
-  border-bottom:1px solid white ;
-  border-top:1px solid white ;
-
-}
-.w2:hover{
-  width: 45px;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
-}
-.w3:hover{
-  width: 80px;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
 }
