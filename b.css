@@ -33,22 +33,21 @@
   width: 40px;
   height: 5px;
   margin-top: 10px;
-  box-shadow: 0px 5px 50px 5px;
 }
 
-input:hover +.hamburger :first-child {
+input:checked +.hamburger :first-child {
   transform: rotate(45deg);
   transform-origin: 0% 0%;
   margin-left: 10px;
   transition: 500ms;
 }
 
-input:hover +.hamburger :nth-child(2) {
+input:checked +.hamburger :nth-child(2) {
   display: none;
   transition: 500ms;
 }
 
-input:hover +.hamburger :last-child {
+input:checked +.hamburger :last-child {
   transform: rotate(-45deg);
   transform-origin: 0% 0%;
   margin-top: 24px;
@@ -93,4 +92,7 @@ input {
 .sidebar {
   background-color: red;
   grid-area: sidebar;
+}
+input:hover + .hamburger > div {
+  box-shadow: 0px 5px 50px 5px white;
 }
