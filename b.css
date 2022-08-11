@@ -71,16 +71,19 @@ input {
   width:50px;
   border-bottom: 3px solid white;
   border-top: 3px solid white;
+  transition: 500ms;
 }
 .n2:hover {
   width:90px;
   border-bottom: 3px solid white;
   border-top: 3px solid white;
+  transition: 500ms;
 }
 .n3:hover {
   width:80px;
   border-bottom: 3px solid white;
   border-top: 3px solid white;
+  transition: 500ms;
 }
 .sidebar {
   background-color: red;
