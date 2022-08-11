@@ -54,7 +54,7 @@ input:checked +.hamburger :last-child {
   transition: 500ms;
 }
 input:checked +.hamburger +.names {
-  transform: translateX(20%);
+  transform: translateX(15%);
   opacity: 1;
 }
 .names {
